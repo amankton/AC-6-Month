@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC Williams Marketing Timeline | 6-Month Project Plan</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .timeline-container {
+            position: relative;
+            padding: 2rem 0;
+        }
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(180deg, #6366F1, #8B5CF6, #EC4899);
+            border-radius: 3px;
+            z-index: 1;
+        }
+        .month-marker {
+            position: relative;
+            z-index: 2;
+            margin-bottom: 2.5rem;
+        }
+        .month-indicator {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            background: white;
+            color: #4F46E5;
+            font-weight: bold;
+            border: 4px solid #4F46E5;
+            box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.5);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 3;
+        }
+        .service-card {
+            transition: all 0.3s ease;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.2);
+        }
+        .digital-makeover { border-left: 5px solid #3B82F6; }
+        .social-media { border-left: 5px solid #10B981; }
+        .ad-creatives { border-left: 5px solid #F59E0B; }
+        .ad-buys { border-left: 5px solid #EC4899; }
+        .blogging { border-left: 5px solid #8B5CF6; }
+        .milestone-marker {
+            position: relative;
+            background: #FEF3C7;
+            border-left: 5px solid #F59E0B;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .milestone-marker::before {
+            content: "🏆";
+            position: absolute;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+        }
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .progress-container {
+            position: relative;
+            height: 10px;
+            background-color: #e2e8f0;
+            border-radius: 9999px;
+            overflow: hidden;
+            margin-top: 0.5rem;
+        }
+        .progress-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: linear-gradient(90deg, #3B82F6, #8B5CF6);
+            border-radius: 9999px;
+            transition: width 0.8s ease-out;
+            width: 0%; /* Start at 0% visually */
+        }
+        @media print {
+            .page-break { display: none; }
+            .service-card, .milestone-marker { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12 animate__animated animate__fadeIn">
+            <h1 class="text-4xl font-bold text-indigo-600 mb-2">AC Williams Marketing Project</h1>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-4">6-Month Timeline & Project Plan</h2>
+            <div class="flex justify-center items-center">
+                <div class="mr-4 bg-indigo-500 text-white px-4 py-2 rounded-lg shadow-md">
+                    <span class="font-bold">Start Date:</span> May 1, 2025
+                </div>
+                <div class="ml-4 bg-pink-500 text-white px-4 py-2 rounded-lg shadow-md">
+                    <span class="font-bold">Target Revenue:</span> $50K
+                </div>
+            </div>
+        </header>
+
+        <div class="mb-8 bg-white rounded-lg shadow-lg p-6 animate__animated animate__fadeIn">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Project Overview</h2>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-6">
+                 <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                    <h3 class="font-bold text-blue-700">Digital Makeover</h3>
+                    <p class="text-sm text-gray-600">Website redesign, brand identity refresh, media presence optimization</p>
+                </div>
+                <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                    <h3 class="font-bold text-green-700">Social Media</h3>
+                    <p class="text-sm text-gray-600">Content creation, community engagement, platform growth</p>
+                </div>
+                <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
+                    <h3 class="font-bold text-yellow-700">Ad Creatives</h3>
+                    <p class="text-sm text-gray-600">Design, copywriting, video production for promotional content</p>
+                </div>
+                <div class="bg-pink-50 p-4 rounded-lg border-l-4 border-pink-500">
+                    <h3 class="font-bold text-pink-700">Ad Buys</h3>
+                    <p class="text-sm text-gray-600">Strategic placement on Facebook, Instagram, and other platforms</p>
+                </div>
+                <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                    <h3 class="font-bold text-purple-700">Blogging</h3>
+                    <p class="text-sm text-gray-600">Authority content creation, SEO optimization, industry positioning</p>
+                </div>
+            </div>
+            <div class="flex flex-wrap justify-between items-center p-4 bg-gray-50 rounded-lg">
+                <div>
+                    <p class="font-semibold text-gray-700">Project Terms:</p>
+                    <ul class="list-disc list-inside text-sm text-gray-600 ml-4">
+                        <li>$3,000 upfront deposit</li>
+                        <li>$1,000 monthly fee (13-month commitment)</li>
+                        <li>Fee increases to $2,500/month after reaching $50K in generated income</li>
+                        <li>Back-payment of $1,500/month difference for previous months at $50K threshold</li>
+                    </ul>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <p class="font-semibold text-gray-700 mb-2">Project Completion Status:</p>
+                    <div class="progress-container">
+                        <div id="main-progress-bar" class="progress-bar" data-progress="0"></div>
+                    </div>
+                    <p id="progress-text" class="text-xs text-gray-500 mt-1 text-right">0% Complete</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-container relative animate__animated animate__fadeIn">
+            <div class="timeline-line"></div>
+
+            <div class="month-marker mb-16">
+                <div class="month-indicator mb-8">Month 1</div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="service-card digital-makeover bg-white rounded-lg shadow-md p-5">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-laptop-code text-blue-500 mr-3 text-xl"></i>
+                            <h3 class="font-bold text-gray-800">Digital Makeover</h3>
+                        </div>
+                        <span class="tag bg-blue-100 text-blue-700">Week 1-2</span>
+                        <ul class="mt-3 space-y-2">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i><span>Complete website and social media audit</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i><span>Competitor analysis (3-5 similar artists)</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i><span>Website structure redesign planning</span></li>
+                        </ul>
+                    </div>
+                    <div class="service-card social-media bg-white rounded-lg shadow-md p-5">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-hashtag text-green-500 mr-3 text-xl"></i>
+                            <h3 class="font-bold text-gray-800">Social Media Management</h3>
+                        </div>
+                        <span class="tag bg-green-100 text-green-700">Week 1-4</span>
+                        <ul class="mt-3 space-y-2">
+                             <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i><span>Social media account optimization</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i><span>Content calendar development (1 month ahead)</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i><span>Initial batch of 10 content pieces created</span></li>
+                        </ul>
+                    </div>
+                    <div class="service-card ad-creatives bg-white rounded-lg shadow-md p-5">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-paint-brush text-yellow-500 mr-3 text-xl"></i>
+                            <h3 class="font-bold text-gray-800">Ad Creatives</h3>
+                        </div>
+                        <span class="tag bg-yellow-100 text-yellow-700">Week 3-4</span>
+                        <ul class="mt-3 space-y-2">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i><span>Brand visual identity refinement</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i><span>Ad creative concept development (3 concepts)</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i><span>Design templates for consistent branding</span></li>
+                        </ul>
+                    </div>
+                    <div class="service-card blogging bg-white rounded-lg shadow-md p-5">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-feather-alt text-purple-500 mr-3 text-xl"></i>
+                            <h3 class="font-bold text-gray-800">Blogging</h3>
+                        </div>
+                        <span class="tag bg-purple-100 text-purple-700">Week 3-4</span>
+                        <ul class="mt-3 space-y-2">
+                           <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i><span>Topic research and keyword analysis</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i><span>Content strategy development</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i><span>First blog post draft prepared</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="milestone-marker mt-8">
+                    <h4 class="text-lg font-bold text-yellow-800">Month 1 Milestone</h4>
+                    <p class="text-gray-700">Complete digital audit and strategy documents, with initial content pieces ready for launch.</p>
+                </div>
+            </div>
+
+            <div class="month-marker mb-16">
+                 <div class="month-indicator mb-8">Month 2</div>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                     <div class="service-card digital-makeover bg-white rounded-lg shadow-md p-5">
+                         <div class="flex items-center mb-3"><i class="fas fa-laptop-code text-blue-500 mr-3 text-xl"></i><h3 class="font-bold text-gray-800">Digital Makeover</h3></div>
+                         <span class="tag bg-blue-100 text-blue-700">Week 1-4</span>
+                         <ul class="mt-3 space-y-2">
+                             <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i><span>Website redesign implementation</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i><span>SEO optimization for all pages</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i><span>Media kit development</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i><span>Fan subscription/mailing list setup</span></li>
+                         </ul>
+                     </div>
+                     <div class="service-card social-media bg-white rounded-lg shadow-md p-5">
+                         <div class="flex items-center mb-3"><i class="fas fa-hashtag text-green-500 mr-3 text-xl"></i><h3 class="font-bold text-gray-800">Social Media Management</h3></div>
+                         <span class="tag bg-green-100 text-green-700">Week 1-4</span>
+                         <ul class="mt-3 space-y-2">
+                             <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i><span>Daily content posting across platforms</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i><span>Engagement campaigns (2 per week)</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i><span>Influencer outreach strategy (10 targets)</span></li>
+                         </ul>
+                     </div>
+                     <div class="service-card ad-buys bg-white rounded-lg shadow-md p-5">
+                         <div class="flex items-center mb-3"><i class="fas fa-bullhorn text-pink-500 mr-3 text-xl"></i><h3 class="font-bold text-gray-800">Ad Buys</h3></div>
+                         <span class="tag bg-pink-100 text-pink-700">Week 2-4</span>
+                         <ul class="mt-3 space-y-2">
+                             <li class="flex items-start"><i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i><span>Initial test campaigns on Facebook/Instagram</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i><span>Audience targeting refinement</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i><span>Budget: $500 test spend</span></li>
+                         </ul>
+                     </div>
+                     <div class="service-card blogging bg-white rounded-lg shadow-md p-5">
+                         <div class="flex items-center mb-3"><i class="fas fa-feather-alt text-purple-500 mr-3 text-xl"></i><h3 class="font-bold text-gray-800">Blogging</h3></div>
+                         <span class="tag bg-purple-100 text-purple-700">Week 1-4</span>
+                         <ul class="mt-3 space-y-2">
+                             <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i><span>Launch blog section on website</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i><span>Publish 2 authority blog posts</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i><span>Content distribution to relevant platforms</span></li>
+                         </ul>
+                     </div>
+                 </div>
+                 <div class="milestone-marker mt-8">
+                     <h4 class="text-lg font-bold text-yellow-800">Month 2 Milestone</h4>
+                     <p class="text-gray-700">Website relaunch, initial ad campaigns running, social media posting schedule fully implemented.</p>
+                     <div class="mt-2">
+                         <span class="text-sm font-semibold text-gray-600">Expected Growth:</span>
+                         <span class="ml-2 text-sm text-green-600">+15% social media following, website traffic baseline established</span>
+                     </div>
+                 </div>
+             </div>
+
+            <div class="month-marker mb-16">
+                 <div class="month-indicator mb-8">Month 3</div>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                     <div class="service-card digital-makeover bg-white rounded-lg shadow-md p-5">
+                         <div class="flex items-center mb-3"><i class="fas fa-laptop-code text-blue-500 mr-3 text-xl"></i><h3 class="font-bold text-gray-800">Digital Makeover</h3></div>
+                         <span class="tag bg-blue-100 text-blue-700">Week 1-2</span>
+                         <ul class="mt-3 space-y-2">
+                             <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i><span>Website performance optimization</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i><span>Merchandise store integration (if applicable)</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i><span>Analytics dashboard setup for client access</span></li>
+                         </ul>
+                     </div>
+                     <div class="service-card ad-creatives bg-white rounded-lg shadow-md p-5">
+                         <div class="flex items-center mb-3"><i class="fas fa-paint-brush text-yellow-500 mr-3 text-xl"></i><h3 class="font-bold text-gray-800">Ad Creatives</h3></div>
+                         <span class="tag bg-yellow-100 text-yellow-700">Week 1-3</span>
+                         <ul class="mt-3 space-y-2">
+                             <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i><span>New ad creative development based on Month 2 results</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i><span>Video ad production (30s promo)</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i><span>Carousel and story ad assets</span></li>
+                         </ul>
+                     </div>
+                     <div class="service-card social-media bg-white rounded-lg shadow-md p-5">
+                         <div class="flex items-center mb-3"><i class="fas fa-hashtag text-green-500 mr-3 text-xl"></i><h3 class="font-bold text-gray-800">Social Media Management</h3></div>
+                         <span class="tag bg-green-100 text-green-700">Week 1-4</span>
+                         <ul class="mt-3 space-y-2">
+                             <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i><span>Content plan optimization based on analytics</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i><span>Fan engagement campaign (contest or giveaway)</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i><span>Initiate 2 influencer collaborations</span></li>
+                         </ul>
+                     </div>
+                     <div class="service-card ad-buys bg-white rounded-lg shadow-md p-5">
+                         <div class="flex items-center mb-3"><i class="fas fa-bullhorn text-pink-500 mr-3 text-xl"></i><h3 class="font-bold text-gray-800">Ad Buys</h3></div>
+                         <span class="tag bg-pink-100 text-pink-700">Week 1-4</span>
+                         <ul class="mt-3 space-y-2">
+                             <li class="flex items-start"><i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i><span>Scale successful ad campaigns from Month 2</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i><span>A/B testing of new creative concepts</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i><span>Budget: $1,000-1,500 spend</span></li>
+                         </ul>
+                     </div>
+                 </div>
+                 <div class="milestone-marker mt-8">
+                     <h4 class="text-lg font-bold text-yellow-800">Month 3 Milestone</h4>
+                     <p class="text-gray-700">First revenue analysis, ad campaign optimization, influencer collaborations initiated.</p>
+                     <div class="mt-2">
+                         <span class="text-sm font-semibold text-gray-600">Target Revenue:</span>
+                         <span class="ml-2 text-sm text-green-600">$5,000-10,000 from combined marketing efforts</span>
+                     </div>
+                 </div>
+             </div>
+
+            <div class="month-marker mb-16">
+                 <div class="month-indicator mb-8">Month 4</div>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                     <div class="service-card social-media bg-white rounded-lg shadow-md p-5">
+                         <div class="flex items-center mb-3"><i class="fas fa-hashtag text-green-500 mr-3 text-xl"></i><h3 class="font-bold text-gray-800">Social Media Management</h3></div>
+                         <span class="tag bg-green-100 text-green-700">Week 1-4</span>
+                         <ul class="mt-3 space-y-2">
+                             <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i><span>Content series launch (e.g., behind-the-scenes)</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i><span>Community Q&A or live session</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i><span>Expand to new platform if applicable (TikTok/YouTube)</span></li>
+                         </ul>
+                     </div>
+                     <div class="service-card ad-creatives bg-white rounded-lg shadow-md p-5">
+                         <div class="flex items-center mb-3"><i class="fas fa-paint-brush text-yellow-500 mr-3 text-xl"></i><h3 class="font-bold text-gray-800">Ad Creatives</h3></div>
+                         <span class="tag bg-yellow-100 text-yellow-700">Week 1-3</span>
+                         <ul class="mt-3 space-y-2">
+                             <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i><span>Seasonal/themed campaign development</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i><span>Retargeting ad concepts</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i><span>Lead generation creative assets</span></li>
+                         </ul>
+                     </div>
+                     <div class="service-card ad-buys bg-white rounded-lg shadow-md p-5">
+                         <div class="flex items-center mb-3"><i class="fas fa-bullhorn text-pink-500 mr-3 text-xl"></i><h3 class="font-bold text-gray-800">Ad Buys</h3></div>
+                         <span class="tag bg-pink-100 text-pink-700">Week 1-4</span>
+                         <ul class="mt-3 space-y-2">
+                             <li class="flex items-start"><i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i><span>Expand ad targeting based on previous data</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i><span>Implement retargeting campaigns</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i><span>Budget: $1,500-2,000 spend</span></li>
+                         </ul>
+                     </div>
+                     <div class="service-card blogging bg-white rounded-lg shadow-md p-5">
+                         <div class="flex items-center mb-3"><i class="fas fa-feather-alt text-purple-500 mr-3 text-xl"></i><h3 class="font-bold text-gray-800">Blogging</h3></div>
+                         <span class="tag bg-purple-100 text-purple-700">Week 1-4</span>
+                         <ul class="mt-3 space-y-2">
+                             <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i><span>Publish 2 more authority blog posts</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i><span>Guest post pitching to music industry blogs</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i><span>SEO optimization of all content</span></li>
+                         </ul>
+                     </div>
+                 </div>
+                 <div class="milestone-marker mt-8">
+                     <h4 class="text-lg font-bold text-yellow-800">Month 4 Milestone</h4>
+                     <p class="text-gray-700">Content series launch, expanded ad campaigns, engagement metrics improvement.</p>
+                     <div class="mt-2">
+                         <span class="text-sm font-semibold text-gray-600">Target Revenue:</span>
+                         <span class="ml-2 text-sm text-green-600">$15,000-20,000 cumulative from marketing efforts</span>
+                     </div>
+                 </div>
+             </div>
+
+             <div class="month-marker mb-16">
+                 <div class="month-indicator mb-8">Month 5</div>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                     <div class="service-card digital-makeover bg-white rounded-lg shadow-md p-5">
+                         <div class="flex items-center mb-3"><i class="fas fa-laptop-code text-blue-500 mr-3 text-xl"></i><h3 class="font-bold text-gray-800">Digital Makeover</h3></div>
+                         <span class="tag bg-blue-100 text-blue-700">Week 1-2</span>
+                         <ul class="mt-3 space-y-2">
+                             <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i><span>Conversion rate optimization on website</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i><span>VIP fan section or membership area development</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i><span>Email marketing campaign automation</span></li>
+                         </ul>
+                     </div>
+                     <div class="service-card social-media bg-white rounded-lg shadow-md p-5">
+                         <div class="flex items-center mb-3"><i class="fas fa-hashtag text-green-500 mr-3 text-xl"></i><h3 class="font-bold text-gray-800">Social Media Management</h3></div>
+                         <span class="tag bg-green-100 text-green-700">Week 1-4</span>
+                         <ul class="mt-3 space-y-2">
+                             <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i><span>Special fan appreciation campaign</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i><span>Content collaboration with 2-3 influencers</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i><span>Launch user-generated content initiative</span></li>
+                         </ul>
+                     </div>
+                     <div class="service-card ad-buys bg-white rounded-lg shadow-md p-5">
+                         <div class="flex items-center mb-3"><i class="fas fa-bullhorn text-pink-500 mr-3 text-xl"></i><h3 class="font-bold text-gray-800">Ad Buys</h3></div>
+                         <span class="tag bg-pink-100 text-pink-700">Week 1-4</span>
+                         <ul class="mt-3 space-y-2">
+                             <li class="flex items-start"><i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i><span>Scale high-performing campaigns</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i><span>Lookalike audience targeting expansion</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i><span>Budget: $2,000-2,500 spend</span></li>
+                         </ul>
+                     </div>
+                     <div class="service-card blogging bg-white rounded-lg shadow-md p-5">
+                         <div class="flex items-center mb-3"><i class="fas fa-feather-alt text-purple-500 mr-3 text-xl"></i><h3 class="font-bold text-gray-800">Blogging</h3></div>
+                         <span class="tag bg-purple-100 text-purple-700">Week 1-4</span>
+                         <ul class="mt-3 space-y-2">
+                             <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i><span>Publish 2 more authority blog posts</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i><span>1-2 guest posts on industry publications</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i><span>Interview series with industry figures</span></li>
+                         </ul>
+                     </div>
+                 </div>
+                 <div class="milestone-marker mt-8">
+                     <h4 class="text-lg font-bold text-yellow-800">Month 5 Milestone</h4>
+                     <p class="text-gray-700">VIP fan community development, influencer partnerships solidified, content strategy optimization.</p>
+                     <div class="mt-2">
+                         <span class="text-sm font-semibold text-gray-600">Target Revenue:</span>
+                         <span class="ml-2 text-sm text-green-600">$30,000-35,000 cumulative from marketing efforts</span>
+                     </div>
+                 </div>
+             </div>
+
+            <div class="month-marker mb-16">
+                 <div class="month-indicator mb-8">Month 6</div>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                     <div class="service-card digital-makeover bg-white rounded-lg shadow-md p-5">
+                         <div class="flex items-center mb-3"><i class="fas fa-laptop-code text-blue-500 mr-3 text-xl"></i><h3 class="font-bold text-gray-800">Digital Makeover</h3></div>
+                         <span class="tag bg-blue-100 text-blue-700">Week 1-2</span>
+                         <ul class="mt-3 space-y-2">
+                             <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i><span>Performance optimization based on 6-month data</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i><span>Advanced analytics review and strategy adjustment</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i><span>New feature implementation based on user feedback</span></li>
+                         </ul>
+                     </div>
+                     <div class="service-card social-media bg-white rounded-lg shadow-md p-5">
+                         <div class="flex items-center mb-3"><i class="fas fa-hashtag text-green-500 mr-3 text-xl"></i><h3 class="font-bold text-gray-800">Social Media Management</h3></div>
+                         <span class="tag bg-green-100 text-green-700">Week 1-4</span>
+                         <ul class="mt-3 space-y-2">
+                             <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i><span>Major promotional campaign for new release/event</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i><span>Cross-platform content strategy implementation</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i><span>Community milestone celebration</span></li>
+                         </ul>
+                     </div>
+                     <div class="service-card ad-creatives bg-white rounded-lg shadow-md p-5">
+                         <div class="flex items-center mb-3"><i class="fas fa-paint-brush text-yellow-500 mr-3 text-xl"></i><h3 class="font-bold text-gray-800">Ad Creatives</h3></div>
+                         <span class="tag bg-yellow-100 text-yellow-700">Week 1-3</span>
+                         <ul class="mt-3 space-y-2">
+                             <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i><span>Premium video ad production</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i><span>Interactive ad formats development</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i><span>High-impact creative for major promotion</span></li>
+                         </ul>
+                     </div>
+                     <div class="service-card ad-buys bg-white rounded-lg shadow-md p-5">
+                         <div class="flex items-center mb-3"><i class="fas fa-bullhorn text-pink-500 mr-3 text-xl"></i><h3 class="font-bold text-gray-800">Ad Buys</h3></div>
+                         <span class="tag bg-pink-100 text-pink-700">Week 1-4</span>
+                         <ul class="mt-3 space-y-2">
+                             <li class="flex items-start"><i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i><span>Major promotional campaign ad push</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i><span>Multi-platform ad strategy</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i><span>Budget: $3,000-3,500 spend</span></li>
+                         </ul>
+                     </div>
+                 </div>
+                 <div class="milestone-marker mt-8 bg-indigo-50 border-indigo-500">
+                     <h4 class="text-lg font-bold text-indigo-800">6-Month Milestone Achievement</h4>
+                     <p class="text-gray-700">Comprehensive marketing strategy implementation, significant audience growth, revenue generation momentum.</p>
+                     <div class="mt-2">
+                         <span class="text-sm font-semibold text-gray-600">Revenue Target:</span>
+                         <span class="ml-2 text-sm font-bold text-green-600">$50,000 generated income achievement!</span>
+                     </div>
+                     <div class="mt-2 py-2 px-3 bg-yellow-50 rounded-lg border border-yellow-200">
+                         <p class="text-yellow-800 font-medium">Upon reaching $50K: Contract adjusts to $2,500/month + retroactive $1,500/month payment for previous months</p>
+                     </div>
+                 </div>
+             </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-6 mt-8 animate__animated animate__fadeIn">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Key Performance Indicators</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-blue-50 p-4 rounded-lg">
+                    <h3 class="font-bold text-blue-700 mb-2">Audience Growth</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start"><i class="fas fa-chart-line text-blue-500 mt-1 mr-2"></i><span>Social media follower growth</span></li>
+                        <li class="flex items-start"><i class="fas fa-chart-line text-blue-500 mt-1 mr-2"></i><span>Email list subscribers</span></li>
+                        <li class="flex items-start"><i class="fas fa-chart-line text-blue-500 mt-1 mr-2"></i><span>Website unique visitors</span></li>
+                        <li class="flex items-start"><i class="fas fa-chart-line text-blue-500 mt-1 mr-2"></i><span>Fan community engagement</span></li>
+                    </ul>
+                </div>
+                <div class="bg-green-50 p-4 rounded-lg">
+                    <h3 class="font-bold text-green-700 mb-2">Engagement Metrics</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start"><i class="fas fa-chart-bar text-green-500 mt-1 mr-2"></i><span>Content engagement rate</span></li>
+                        <li class="flex items-start"><i class="fas fa-chart-bar text-green-500 mt-1 mr-2"></i><span>Website time on page</span></li>
+                        <li class="flex items-start"><i class="fas fa-chart-bar text-green-500 mt-1 mr-2"></i><span>Email open/click rates</span></li>
+                        <li class="flex items-start"><i class="fas fa-chart-bar text-green-500 mt-1 mr-2"></i><span>User-generated content volume</span></li>
+                    </ul>
+                </div>
+                <div class="bg-purple-50 p-4 rounded-lg">
+                    <h3 class="font-bold text-purple-700 mb-2">Revenue Metrics</h3>
+                    <ul class="space-y-2 text-sm">
+                         <li class="flex items-start"><i class="fas fa-money-bill-wave text-purple-500 mt-1 mr-2"></i><span>Total generated income</span></li>
+                        <li class="flex items-start"><i class="fas fa-money-bill-wave text-purple-500 mt-1 mr-2"></i><span>Ad campaign ROI</span></li>
+                        <li class="flex items-start"><i class="fas fa-money-bill-wave text-purple-500 mt-1 mr-2"></i><span>Merchandise/music sales</span></li>
+                        <li class="flex items-start"><i class="fas fa-money-bill-wave text-purple-500 mt-1 mr-2"></i><span>Conversion rate optimization</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg shadow-lg p-6 mt-8 text-white animate__animated animate__fadeIn">
+             <h2 class="text-2xl font-bold mb-4">Next Steps After Month 6</h2>
+            <p class="mb-4">Upon successful completion of the initial 6-month plan and achieving the $50K revenue target, we'll develop a Phase 2 strategy focused on:</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                <div class="bg-white bg-opacity-20 p-4 rounded-lg">
+                    <h3 class="font-bold mb-2">Scaling Success</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start"><i class="fas fa-check-circle mt-1 mr-2"></i><span>Expand successful marketing channels</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle mt-1 mr-2"></i><span>Develop additional revenue streams</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle mt-1 mr-2"></i><span>Explore new platform opportunities</span></li>
+                    </ul>
+                </div>
+                <div class="bg-white bg-opacity-20 p-4 rounded-lg">
+                    <h3 class="font-bold mb-2">Brand Development</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start"><i class="fas fa-check-circle mt-1 mr-2"></i><span>Long-term brand positioning strategy</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle mt-1 mr-2"></i><span>Industry partnership development</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle mt-1 mr-2"></i><span>Advanced audience segmentation</span></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="mt-6 font-semibold">We'll provide a detailed Phase 2 proposal at Month 5 to ensure seamless continuation of marketing momentum.</p>
+        </div>
+
+        <footer class="mt-16 text-center text-gray-500 text-sm animate__animated animate__fadeIn">
+            <p>Prepared exclusively for AC Williams | Marketing Strategy Timeline</p>
+            <p class="mt-2">This document outlines the full 6-month marketing plan and project timeline for your upcoming marketing campaign.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Find the progress bar and its text element
+            const progressBar = document.getElementById('main-progress-bar');
+            const progressText = document.getElementById('progress-text');
+            let animationTriggered = false; // Flag to ensure animation runs only once
+
+            // Function to update progress bar - separated for clarity
+            function animateProgressBar() {
+                if (!progressBar || !progressText) return; // Exit if elements not found
+
+                 // Get the target progress percentage from the data attribute
+                const targetProgress = progressBar.getAttribute('data-progress') || '0'; // Default to 0 if attribute missing
+
+                // Check if the progress container is in the viewport
+                const rect = progressBar.parentElement.getBoundingClientRect();
+                // Animate only if the top is visible, bottom is not above the viewport, and it hasn't run yet
+                if (rect.top < window.innerHeight && rect.bottom >= 0 && !animationTriggered) {
+                    // Set the width to the target percentage to trigger the CSS transition
+                    progressBar.style.width = targetProgress + '%';
+                    // Update the text
+                    progressText.textContent = targetProgress + '% Complete';
+                    animationTriggered = true; // Set flag so it doesn't re-trigger on scroll
+                }
+            }
+
+            // Listen for scroll events
+            window.addEventListener('scroll', animateProgressBar);
+
+            // Also run check once on load in case the element is already in view
+            animateProgressBar();
+        });
+    </script>
+</body>
+</html>
